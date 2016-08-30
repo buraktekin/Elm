@@ -1,0 +1,78 @@
+var _circuithub$elm_html_shorthand$Html_Shorthand_Event$messageDecoder = F2(
+	function (dec, f) {
+		return A2(
+			_elm_lang$core$Json_Decode$customDecoder,
+			_elm_lang$core$Json_Decode$value,
+			function (event) {
+				var r = A2(_elm_lang$core$Json_Decode$decodeValue, dec, event);
+				var r$ = A2(
+					_elm_lang$core$Result$formatError,
+					_circuithub$elm_html_shorthand$Html_Shorthand_Type$EventDecodeError(event),
+					r);
+				var _p0 = {
+					ctor: '_Tuple2',
+					_0: f(r$),
+					_1: r
+				};
+				if (_p0._0.ctor === 'Nothing') {
+					if (_p0._1.ctor === 'Err') {
+						return _elm_lang$core$Result$Err(_p0._1._0);
+					} else {
+						return _elm_lang$core$Result$Err('no message in response to event');
+					}
+				} else {
+					return _elm_lang$core$Result$Ok(_p0._0._0);
+				}
+			});
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Event$onMouseLost = F2(
+	function (dec, f) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'mouseleave',
+			A2(_elm_lang$core$Json_Decode$map, f, dec));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Event$onKeyboardLost = F2(
+	function (dec, f) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'blur',
+			A2(_elm_lang$core$Json_Decode$map, f, dec));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Event$onEnter = F2(
+	function (dec, f) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'keydown',
+			A2(
+				_elm_lang$core$Json_Decode$map,
+				f,
+				A2(
+					_elm_lang$core$Json_Decode$customDecoder,
+					A3(
+						_elm_lang$core$Json_Decode$object2,
+						F2(
+							function (v0, v1) {
+								return {ctor: '_Tuple2', _0: v0, _1: v1};
+							}),
+						_elm_lang$html$Html_Events$keyCode,
+						dec),
+					function (_p1) {
+						var _p2 = _p1;
+						return _elm_lang$core$Native_Utils.eq(_p2._0, 13) ? _elm_lang$core$Result$Ok(_p2._1) : _elm_lang$core$Result$Err('expected key code 13');
+					})));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Event$onChange = F2(
+	function (dec, f) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'change',
+			A2(_elm_lang$core$Json_Decode$map, f, dec));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Event$onInput$ = F2(
+	function (dec, f) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'input',
+			A2(_elm_lang$core$Json_Decode$map, f, dec));
+	});

@@ -1,0 +1,154 @@
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$EventDecodeError = F2(
+	function (a, b) {
+		return {event: a, reason: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$FormUpdate = F2(
+	function (a, b) {
+		return {onSubmit: a, onEnter: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$FieldUpdate = F3(
+	function (a, b, c) {
+		return {onInput: a, onEnter: b, onKeyboardLost: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ButtonUpdate = function (a) {
+	return {onClick: a};
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$SelectUpdate = function (a) {
+	return {onSelect: a};
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ClassParam = function (a) {
+	return {$class: a};
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ClassIdParam = F2(
+	function (a, b) {
+		return {$class: a, id: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ClassCiteParam = F2(
+	function (a, b) {
+		return {$class: a, cite: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$AnchorParam = F2(
+	function (a, b) {
+		return {$class: a, href: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ModParam = F3(
+	function (a, b, c) {
+		return {$class: a, cite: b, datetime: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ImgParam = F5(
+	function (a, b, c, d, e) {
+		return {$class: a, src: b, width: c, height: d, alt: e};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$IframeParam = F7(
+	function (a, b, c, d, e, f, g) {
+		return {$class: a, name: b, src: c, width: d, height: e, sandbox: f, seamless: g};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$EmbedParam = F7(
+	function (a, b, c, d, e, f, g) {
+		return {$class: a, id: b, src: c, type$: d, useMapName: e, height: f, width: g};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ObjectParam = F7(
+	function (a, b, c, d, e, f, g) {
+		return {$class: a, name: b, data: c, type$: d, useMapName: e, height: f, width: g};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$MediaParam = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {$class: a, src: b, autoplay: c, controls: d, loop: e, preload: f, poster: g, volume: h};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$VideoParam = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return {$class: a, src: b, width: c, height: d, videoHeight: e, videoWidth: f, autoplay: g, controls: h, loop: i, preload: j, poster: k, volume: l};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$FormParam = F3(
+	function (a, b, c) {
+		return {$class: a, novalidate: b, update: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$FieldsetParam = F2(
+	function (a, b) {
+		return {$class: a, disabled: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$LabelParam = F2(
+	function (a, b) {
+		return {$class: a, $for: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputFieldParam = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {$class: a, name: b, placeholder: c, update: d, type$: e, pattern: f, required: g, decoder: h};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputTextParam = F7(
+	function (a, b, c, d, e, f, g) {
+		return {$class: a, name: b, placeholder: c, value: d, required: e, autocomplete: f, update: g};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputMaybeTextParam = F6(
+	function (a, b, c, d, e, f) {
+		return {$class: a, name: b, placeholder: c, value: d, autocomplete: e, update: f};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputUrlParam = F7(
+	function (a, b, c, d, e, f, g) {
+		return {$class: a, name: b, placeholder: c, value: d, required: e, autocomplete: f, update: g};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputMaybeUrlParam = F6(
+	function (a, b, c, d, e, f) {
+		return {$class: a, name: b, placeholder: c, value: d, autocomplete: e, update: f};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputFloatParam = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {$class: a, name: b, placeholder: c, value: d, min: e, max: f, step: g, update: h};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputMaybeFloatParam = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {$class: a, name: b, placeholder: c, value: d, min: e, max: f, step: g, update: h};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputIntParam = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {$class: a, name: b, placeholder: c, value: d, min: e, max: f, step: g, update: h};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$InputMaybeIntParam = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {$class: a, name: b, placeholder: c, value: d, min: e, max: f, step: g, update: h};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ButtonParam = F2(
+	function (a, b) {
+		return {$class: a, update: b};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$SelectParam = F3(
+	function (a, b, c) {
+		return {$class: a, name: b, update: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$OptionParam = F3(
+	function (a, b, c) {
+		return {label: a, value: b, selected: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$OutputParam = F3(
+	function (a, b, c) {
+		return {$class: a, name: b, $for: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$ProgressParam = F3(
+	function (a, b, c) {
+		return {$class: a, value: b, max: c};
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand_Type$MeterParam = F7(
+	function (a, b, c, d, e, f, g) {
+		return {$class: a, value: b, min: c, max: d, low: e, high: f, optimum: g};
+	});

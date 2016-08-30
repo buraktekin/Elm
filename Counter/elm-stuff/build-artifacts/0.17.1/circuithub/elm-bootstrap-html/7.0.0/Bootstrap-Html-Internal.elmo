@@ -1,0 +1,151 @@
+var _circuithub$elm_bootstrap_html$Bootstrap_Html_Internal$colOffset = F3(
+	function (gridsize, colspan, offset) {
+		var prefix = A2(
+			_elm_lang$core$Basics_ops['++'],
+			'col',
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				A2(
+					_elm_lang$core$String$cons,
+					_elm_lang$core$Native_Utils.chr('-'),
+					gridsize),
+				'-'));
+		return (_elm_lang$core$Native_Utils.cmp(offset, 0) > 0) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			prefix,
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_elm_lang$core$Basics$toString(colspan),
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					A2(
+						_elm_lang$core$String$cons,
+						_elm_lang$core$Native_Utils.chr(' '),
+						prefix),
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						'offset-',
+						_elm_lang$core$Basics$toString(offset))))) : A2(
+			_elm_lang$core$Basics_ops['++'],
+			prefix,
+			_elm_lang$core$Basics$toString(colspan));
+	});
+var _circuithub$elm_bootstrap_html$Bootstrap_Html_Internal$btncNoevent = F3(
+	function (c, typ, _p0) {
+		var _p1 = _p0;
+		var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+		return A2(
+			_elm_lang$html$Html$button,
+			A2(
+				_elm_lang$core$List_ops['::'],
+				_elm_lang$html$Html_Attributes$type$(typ),
+				A2(
+					_elm_lang$core$List_ops['::'],
+					_circuithub$elm_html_shorthand$Html_Shorthand$class$(
+						A2(_elm_lang$core$Basics_ops['++'], 'btn ', c)),
+					filterJust(
+						_elm_lang$core$Native_List.fromArray(
+							[
+								A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$title, _p1.tooltip)
+							])))),
+			function () {
+				var _p2 = {ctor: '_Tuple2', _0: _p1.icon, _1: _p1.label};
+				_v1_3:
+				do {
+					if (_p2.ctor === '_Tuple2') {
+						if (_p2._0.ctor === 'Just') {
+							if (_p2._1.ctor === 'Just') {
+								return _elm_lang$core$Native_List.fromArray(
+									[
+										_p2._0._0,
+										_elm_lang$html$Html$text(
+										A2(
+											_elm_lang$core$String$cons,
+											_elm_lang$core$Native_Utils.chr(' '),
+											_p2._1._0))
+									]);
+							} else {
+								return _elm_lang$core$Native_List.fromArray(
+									[_p2._0._0]);
+							}
+						} else {
+							if (_p2._1.ctor === 'Just') {
+								return _elm_lang$core$Native_List.fromArray(
+									[
+										_elm_lang$html$Html$text(_p2._1._0)
+									]);
+							} else {
+								break _v1_3;
+							}
+						}
+					} else {
+						break _v1_3;
+					}
+				} while(false);
+				return _elm_lang$core$Native_List.fromArray(
+					[]);
+			}());
+	});
+var _circuithub$elm_bootstrap_html$Bootstrap_Html_Internal$btnc = F4(
+	function (c, typ, _p3, x) {
+		var _p4 = _p3;
+		var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+		return A2(
+			_elm_lang$html$Html$button,
+			A2(
+				_elm_lang$core$List_ops['::'],
+				_elm_lang$html$Html_Attributes$type$(typ),
+				A2(
+					_elm_lang$core$List_ops['::'],
+					_circuithub$elm_html_shorthand$Html_Shorthand$class$(
+						A2(_elm_lang$core$Basics_ops['++'], 'btn ', c)),
+					A2(
+						_elm_lang$core$List_ops['::'],
+						_elm_lang$html$Html_Events$onClick(x),
+						filterJust(
+							_elm_lang$core$Native_List.fromArray(
+								[
+									A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$title, _p4.tooltip)
+								]))))),
+			function () {
+				var _p5 = {ctor: '_Tuple2', _0: _p4.icon, _1: _p4.label};
+				_v3_3:
+				do {
+					if (_p5.ctor === '_Tuple2') {
+						if (_p5._0.ctor === 'Just') {
+							if (_p5._1.ctor === 'Just') {
+								return _elm_lang$core$Native_List.fromArray(
+									[
+										_p5._0._0,
+										_elm_lang$html$Html$text(
+										A2(
+											_elm_lang$core$String$cons,
+											_elm_lang$core$Native_Utils.chr(' '),
+											_p5._1._0))
+									]);
+							} else {
+								return _elm_lang$core$Native_List.fromArray(
+									[_p5._0._0]);
+							}
+						} else {
+							if (_p5._1.ctor === 'Just') {
+								return _elm_lang$core$Native_List.fromArray(
+									[
+										_elm_lang$html$Html$text(_p5._1._0)
+									]);
+							} else {
+								break _v3_3;
+							}
+						}
+					} else {
+						break _v3_3;
+					}
+				} while(false);
+				return _elm_lang$core$Native_List.fromArray(
+					[]);
+			}());
+	});
+var _circuithub$elm_bootstrap_html$Bootstrap_Html_Internal$BtnParam = F3(
+	function (a, b, c) {
+		return {icon: a, label: b, tooltip: c};
+	});

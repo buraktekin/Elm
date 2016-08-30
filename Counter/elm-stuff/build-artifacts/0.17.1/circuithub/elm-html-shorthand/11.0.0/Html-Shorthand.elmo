@@ -1,0 +1,1745 @@
+var _circuithub$elm_html_shorthand$Html_Shorthand$meter$ = F2(
+	function (p, t) {
+		var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+		return A2(
+			_elm_lang$html$Html$meter,
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_elm_lang$core$Native_List.fromArray(
+					[
+						_elm_lang$html$Html_Attributes$value(
+						_elm_lang$core$Basics$toString(p.value)),
+						_elm_lang$html$Html_Attributes$min(
+						_elm_lang$core$Basics$toString(_elm_lang$core$Basics$min)),
+						_elm_lang$html$Html_Attributes$max(
+						_elm_lang$core$Basics$toString(p.max))
+					]),
+				filterJust(
+					_elm_lang$core$Native_List.fromArray(
+						[
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p0) {
+								return _elm_community$html_extra$Html_Attributes_Extra$low(
+									_elm_lang$core$Basics$toString(_p0));
+							},
+							p.low),
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p1) {
+								return _elm_community$html_extra$Html_Attributes_Extra$high(
+									_elm_lang$core$Basics$toString(_p1));
+							},
+							p.high),
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p2) {
+								return _elm_community$html_extra$Html_Attributes_Extra$optimum(
+									_elm_lang$core$Basics$toString(_p2));
+							},
+							p.optimum)
+						]))),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(t)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$progress$ = F2(
+	function (p, t) {
+		return A2(
+			_elm_lang$html$Html$progress,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$value(
+					_elm_lang$core$Basics$toString(p.value)),
+					_elm_lang$html$Html_Attributes$max(
+					_elm_lang$core$Basics$toString(p.max))
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(t)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$option$ = function (p) {
+	return A2(
+		_elm_lang$html$Html$option,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				A2(_elm_community$html_extra$Html_Attributes_Extra$stringProperty, 'label', p.label),
+				_elm_lang$html$Html_Attributes$value(
+				_elm_lang$core$Basics$toString(p.value)),
+				_elm_lang$html$Html_Attributes$selected(p.selected)
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$option_ = F2(
+	function (val, sel) {
+		return A2(
+			_elm_lang$html$Html$option,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$selected(sel)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(val)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$buttonReset_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$button,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$type$('reset')
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$buttonSubmit_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$button,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$type$('submit')
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$buttonLink_ = F2(
+	function (t, msg) {
+		return A2(
+			_elm_lang$html$Html$a,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$href('#'),
+					_elm_lang$html$Html_Events$onClick(msg)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(t)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$button_ = F2(
+	function (t, msg) {
+		return A2(
+			_elm_lang$html$Html$button,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$type$('button'),
+					_elm_lang$html$Html_Events$onClick(msg)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(t)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$label_ = F2(
+	function ($for, t) {
+		return A2(
+			_elm_lang$html$Html$label,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$for($for)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(t)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$legend_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$legend,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldset_ = function (disabled) {
+	return _elm_lang$html$Html$fieldset(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$disabled(disabled)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$th_ = _elm_lang$html$Html$th(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$td_ = _elm_lang$html$Html$td(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$tr_ = _elm_lang$html$Html$tr(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$tfoot_ = _elm_lang$html$Html$tfoot(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$thead_ = _elm_lang$html$Html$thead(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$tbody_ = _elm_lang$html$Html$tbody(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$caption_ = _elm_lang$html$Html$caption(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$table_ = _elm_lang$html$Html$table(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$audio_ = function (url) {
+	return A2(
+		_elm_lang$html$Html$audio,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$src(url)
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$video_ = function (url) {
+	return A2(
+		_elm_lang$html$Html$video,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$src(url)
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$param$ = F2(
+	function (n, v) {
+		return A2(
+			_elm_lang$html$Html$param,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$name(n),
+					_elm_lang$html$Html_Attributes$value(v)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$img_ = F4(
+	function (w, h, s, a) {
+		return A2(
+			_elm_lang$html$Html$img,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$width(w),
+					_elm_lang$html$Html_Attributes$height(h),
+					_elm_lang$html$Html_Attributes$src(s),
+					_elm_lang$html$Html_Attributes$alt(a)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$del_ = _elm_lang$html$Html$del(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$ins_ = _elm_lang$html$Html$ins(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$wbr$ = A2(
+	_elm_lang$html$Html$wbr,
+	_elm_lang$core$Native_List.fromArray(
+		[]),
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$br$ = A2(
+	_elm_lang$html$Html$br,
+	_elm_lang$core$Native_List.fromArray(
+		[]),
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$span_ = _elm_lang$html$Html$span(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$bdo$ = function (dir) {
+	return _elm_lang$html$Html$bdo(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$dir(
+				function () {
+					var _p3 = dir;
+					switch (_p3.ctor) {
+						case 'LeftToRight':
+							return 'ltr';
+						case 'RightToLeft':
+							return 'rtl';
+						default:
+							return 'auto';
+					}
+				}())
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$bdi_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$bdi,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$rp_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$rp,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$rt_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$rt,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$ruby_ = _elm_lang$html$Html$ruby(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$mark_ = _elm_lang$html$Html$mark(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$u_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$u,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$b_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$b,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$i_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$i,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$sup_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$sup,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$sub_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$sub,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$kbd_ = _elm_lang$html$Html$kbd(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$samp_ = _elm_lang$html$Html$samp(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$var_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$var,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$code_ = _elm_lang$html$Html$code(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$abbr_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$abbr,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$q_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$q,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$cite_ = _elm_lang$html$Html$cite(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$s_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$s,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$small_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$small,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$strong_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$strong,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$em_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$em,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$a_ = F2(
+	function (href, t) {
+		return A2(
+			_elm_lang$html$Html$a,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$href(href)
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(t)
+				]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$div_ = _elm_lang$html$Html$div(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$figcaption_ = _elm_lang$html$Html$figcaption(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$dd_ = _elm_lang$html$Html$dd(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$dl_ = _elm_lang$html$Html$dl(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$li_ = _elm_lang$html$Html$li(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$ul_ = _elm_lang$html$Html$ul(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$ol_ = _elm_lang$html$Html$ol(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$blockquote_ = _elm_lang$html$Html$blockquote(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$pre_ = _elm_lang$html$Html$pre(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$hr_ = A2(
+	_elm_lang$html$Html$hr,
+	_elm_lang$core$Native_List.fromArray(
+		[]),
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$p_ = _elm_lang$html$Html$p(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$main_ = _elm_lang$html$Html$main$(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$address_ = _elm_lang$html$Html$address(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$footer_ = _elm_lang$html$Html$footer(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$header_ = _elm_lang$html$Html$header(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$h6_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$h6,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h5_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$h5,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h4_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$h4,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h3_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$h3,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h2_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$h2,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h1_ = function (t) {
+	return A2(
+		_elm_lang$html$Html$h1,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html$text(t)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$nav_ = _elm_lang$html$Html$nav(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$body_ = _elm_lang$html$Html$body(
+	_elm_lang$core$Native_List.fromArray(
+		[]));
+var _circuithub$elm_html_shorthand$Html_Shorthand$class$ = _circuithub$elm_html_shorthand$Html_Shorthand_Internal$class$;
+var _circuithub$elm_html_shorthand$Html_Shorthand$body$ = function (p) {
+	return _elm_lang$html$Html$body(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$nav$ = function (p) {
+	return _elm_lang$html$Html$nav(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h1$ = function (p) {
+	return _elm_lang$html$Html$h1(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h2$ = function (p) {
+	return _elm_lang$html$Html$h2(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h3$ = function (p) {
+	return _elm_lang$html$Html$h3(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h4$ = function (p) {
+	return _elm_lang$html$Html$h4(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h5$ = function (p) {
+	return _elm_lang$html$Html$h5(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$h6$ = function (p) {
+	return _elm_lang$html$Html$h6(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$header$ = function (p) {
+	return _elm_lang$html$Html$header(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$footer$ = function (p) {
+	return _elm_lang$html$Html$footer(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$address$ = function (p) {
+	return _elm_lang$html$Html$address(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$p$ = function (param) {
+	return _elm_lang$html$Html$p(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(param.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$pre$ = function (p) {
+	return _elm_lang$html$Html$pre(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$blockquote$ = function (p) {
+	return _elm_lang$html$Html$blockquote(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$cite(p.cite)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$ol$ = function (p) {
+	return _elm_lang$html$Html$ol(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$ul$ = function (p) {
+	return _elm_lang$html$Html$ul(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$li$ = function (p) {
+	return _elm_lang$html$Html$li(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$dl$ = function (p) {
+	return _elm_lang$html$Html$dl(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$dd$ = function (p) {
+	return _elm_lang$html$Html$dd(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$figcaption$ = function (p) {
+	return _elm_lang$html$Html$figcaption(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$div$ = function (p) {
+	return _elm_lang$html$Html$div(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$a$ = function (p) {
+	return _elm_lang$html$Html$a(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$href(p.href)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$em$ = function (p) {
+	return _elm_lang$html$Html$em(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$strong$ = function (p) {
+	return _elm_lang$html$Html$strong(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$small$ = function (p) {
+	return _elm_lang$html$Html$small(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$s$ = function (p) {
+	return _elm_lang$html$Html$s(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$cite$ = function (p) {
+	return _elm_lang$html$Html$cite(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$q$ = function (p) {
+	return _elm_lang$html$Html$q(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$cite(p.cite)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$abbr$ = function (p) {
+	return _elm_lang$html$Html$abbr(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$code$ = function (p) {
+	return _elm_lang$html$Html$code(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$var$ = function (p) {
+	return _elm_lang$html$Html$var(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$samp$ = function (p) {
+	return _elm_lang$html$Html$samp(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$kbd$ = function (p) {
+	return _elm_lang$html$Html$kbd(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$sub$ = function (p) {
+	return _elm_lang$html$Html$sub(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$sup$ = function (p) {
+	return _elm_lang$html$Html$sup(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$i$ = function (p) {
+	return _elm_lang$html$Html$i(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$b$ = function (p) {
+	return _elm_lang$html$Html$b(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$u$ = function (p) {
+	return _elm_lang$html$Html$u(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$mark$ = function (p) {
+	return _elm_lang$html$Html$mark(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$ruby$ = function (p) {
+	return _elm_lang$html$Html$ruby(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$rt$ = function (p) {
+	return _elm_lang$html$Html$rt(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$rp$ = function (p) {
+	return _elm_lang$html$Html$rp(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$bdi$ = function (p) {
+	return _elm_lang$html$Html$bdi(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$span$ = function (p) {
+	return _elm_lang$html$Html$span(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$ins$ = function (p) {
+	return _elm_lang$html$Html$ins(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$cite(p.cite),
+				_elm_lang$html$Html_Attributes$datetime(p.datetime)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$del$ = function (p) {
+	return _elm_lang$html$Html$del(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$cite(p.cite),
+				_elm_lang$html$Html_Attributes$datetime(p.datetime)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$img$ = function (p) {
+	return A2(
+		_elm_lang$html$Html$img,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$src(p.src),
+				_elm_lang$html$Html_Attributes$width(p.width),
+				_elm_lang$html$Html_Attributes$height(p.height),
+				_elm_lang$html$Html_Attributes$alt(p.alt)
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$video$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return _elm_lang$html$Html$video(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+					_elm_lang$html$Html_Attributes$width(p.width),
+					_elm_lang$html$Html_Attributes$height(p.height),
+					_elm_lang$html$Html_Attributes$autoplay(p.autoplay),
+					_elm_lang$html$Html_Attributes$controls(p.controls),
+					_elm_lang$html$Html_Attributes$loop(p.loop)
+				]),
+			filterJust(
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$src, p.src),
+						A2(
+						_elm_lang$core$Maybe$map,
+						_elm_community$html_extra$Html_Attributes_Extra$stringProperty('preload'),
+						p.preload),
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$poster, p.poster),
+						A2(_elm_lang$core$Maybe$map, _elm_community$html_extra$Html_Attributes_Extra$volume, p.volume)
+					]))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$audio$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return _elm_lang$html$Html$audio(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+					_elm_lang$html$Html_Attributes$autoplay(p.autoplay),
+					_elm_lang$html$Html_Attributes$controls(p.controls),
+					_elm_lang$html$Html_Attributes$loop(p.loop)
+				]),
+			filterJust(
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$src, p.src),
+						A2(
+						_elm_lang$core$Maybe$map,
+						_elm_community$html_extra$Html_Attributes_Extra$stringProperty('preload'),
+						p.preload),
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$poster, p.poster),
+						A2(_elm_lang$core$Maybe$map, _elm_community$html_extra$Html_Attributes_Extra$volume, p.volume)
+					]))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$table$ = function (p) {
+	return _elm_lang$html$Html$table(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$caption$ = function (p) {
+	return _elm_lang$html$Html$caption(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$tbody$ = function (p) {
+	return _elm_lang$html$Html$tbody(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$thead$ = function (p) {
+	return _elm_lang$html$Html$thead(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$tfoot$ = function (p) {
+	return _elm_lang$html$Html$tfoot(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$tr$ = function (p) {
+	return _elm_lang$html$Html$tr(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$td$ = function (p) {
+	return _elm_lang$html$Html$td(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$th$ = function (p) {
+	return _elm_lang$html$Html$th(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$form$ = function (p) {
+	var onEnter$ = function (msg) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'keypress',
+			A2(
+				_elm_lang$core$Json_Decode$customDecoder,
+				_elm_lang$html$Html_Events$keyCode,
+				function (c) {
+					return _elm_lang$core$Native_Utils.eq(c, 13) ? _elm_lang$core$Result$Ok(msg) : _elm_lang$core$Result$Err('expected key code 13');
+				}));
+	};
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return _elm_lang$html$Html$form(
+		A2(
+			_elm_lang$core$List_ops['::'],
+			_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+			A2(
+				_elm_lang$core$List_ops['::'],
+				_elm_lang$html$Html_Attributes$novalidate(p.novalidate),
+				filterJust(
+					_elm_lang$core$Native_List.fromArray(
+						[
+							A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Events$onSubmit, p.update.onSubmit),
+							A2(_elm_lang$core$Maybe$map, onEnter$, p.update.onSubmit)
+						])))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldset$ = function (p) {
+	return _elm_lang$html$Html$fieldset(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$disabled(p.disabled)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$legend$ = function (p) {
+	return _elm_lang$html$Html$legend(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$label$ = function (p) {
+	return _elm_lang$html$Html$label(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$for(p.$for)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$button$ = function (p) {
+	return _elm_lang$html$Html$button(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$type$('button'),
+				_elm_lang$html$Html_Events$onClick(p.update.onClick)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$buttonLink$ = function (p) {
+	return _elm_lang$html$Html$a(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$href('#'),
+				_elm_lang$html$Html_Events$onClick(p.update.onClick)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$buttonSubmit$ = function (p) {
+	return _elm_lang$html$Html$button(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$type$('submit')
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$buttonReset$ = function (p) {
+	return _elm_lang$html$Html$button(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$type$('reset')
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$id$ = _circuithub$elm_html_shorthand$Html_Shorthand_Internal$id$;
+var _circuithub$elm_html_shorthand$Html_Shorthand$section_ = function (i) {
+	return _elm_lang$html$Html$section(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(i)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$section$ = function (p) {
+	return _elm_lang$html$Html$section(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$article_ = function (i) {
+	return _elm_lang$html$Html$article(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(i)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$article$ = function (p) {
+	return _elm_lang$html$Html$article(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$aside$ = function (p) {
+	return _elm_lang$html$Html$aside(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$dt$ = function (p) {
+	return _elm_lang$html$Html$dt(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$figure$ = function (p) {
+	return _elm_lang$html$Html$figure(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$dfn$ = function (p) {
+	return _elm_lang$html$Html$dfn(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$embed$ = function (p) {
+	return A2(
+		_elm_lang$html$Html$embed,
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_circuithub$elm_html_shorthand$Html_Shorthand$id$(p.id),
+				_elm_lang$html$Html_Attributes$src(p.src),
+				_elm_lang$html$Html_Attributes$type$(p.type$),
+				_elm_lang$html$Html_Attributes$width(p.width),
+				_elm_lang$html$Html_Attributes$height(p.height)
+			]),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$encodeClass = _circuithub$elm_html_shorthand$Html_Shorthand_Internal$encodeClass;
+var _circuithub$elm_html_shorthand$Html_Shorthand$encodeId = _circuithub$elm_html_shorthand$Html_Shorthand_Internal$encodeId;
+var _circuithub$elm_html_shorthand$Html_Shorthand$iframe$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	var i$ = _circuithub$elm_html_shorthand$Html_Shorthand$encodeId(p.name);
+	return A2(
+		_elm_lang$html$Html$iframe,
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+					_elm_lang$html$Html_Attributes$id(i$),
+					_elm_lang$html$Html_Attributes$name(i$),
+					_elm_lang$html$Html_Attributes$src(p.src),
+					_elm_lang$html$Html_Attributes$width(p.width),
+					_elm_lang$html$Html_Attributes$height(p.height),
+					_elm_lang$html$Html_Attributes$seamless(p.seamless)
+				]),
+			filterJust(
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$sandbox, p.sandbox)
+					]))),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$object$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	var attrs = filterJust(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				A2(
+				_elm_lang$core$Maybe$map,
+				function (_p4) {
+					return _elm_lang$html$Html_Attributes$usemap(
+						A2(
+							_elm_lang$core$String$cons,
+							_elm_lang$core$Native_Utils.chr('#'),
+							_circuithub$elm_html_shorthand$Html_Shorthand$encodeId(_p4)));
+				},
+				p.useMapName)
+			]));
+	var i$ = _circuithub$elm_html_shorthand$Html_Shorthand$encodeId(p.name);
+	return _elm_lang$html$Html$object(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+					_elm_lang$html$Html_Attributes$id(i$),
+					_elm_lang$html$Html_Attributes$name(i$),
+					A2(_elm_lang$html$Html_Attributes$attribute, 'data', p.data),
+					_elm_lang$html$Html_Attributes$type$(p.type$)
+				]),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				attrs,
+				_elm_lang$core$Native_List.fromArray(
+					[
+						_elm_lang$html$Html_Attributes$height(p.height),
+						_elm_lang$html$Html_Attributes$width(p.width)
+					]))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputField$ = F2(
+	function (p, attrs) {
+		var i$ = _circuithub$elm_html_shorthand$Html_Shorthand$encodeId(p.name);
+		var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+		var pattrs = A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$type$(p.type$),
+					_elm_lang$html$Html_Attributes$id(i$),
+					_elm_lang$html$Html_Attributes$name(i$),
+					_elm_lang$html$Html_Attributes$required(p.required)
+				]),
+			filterJust(
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(
+						_elm_lang$core$Maybe$map,
+						_circuithub$elm_html_shorthand$Html_Shorthand$class$,
+						_elm_lang$core$Native_Utils.eq(p.$class, '') ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(p.$class)),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (onEvent) {
+							return A2(
+								_circuithub$elm_html_shorthand$Html_Shorthand_Event$onInput$,
+								A2(_circuithub$elm_html_shorthand$Html_Shorthand_Event$messageDecoder, p.decoder, onEvent),
+								_elm_lang$core$Basics$identity);
+						},
+						p.update.onInput),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (onEvent) {
+							return A2(
+								_circuithub$elm_html_shorthand$Html_Shorthand_Event$onEnter,
+								A2(_circuithub$elm_html_shorthand$Html_Shorthand_Event$messageDecoder, p.decoder, onEvent),
+								_elm_lang$core$Basics$identity);
+						},
+						p.update.onEnter),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (onEvent) {
+							return A2(
+								_circuithub$elm_html_shorthand$Html_Shorthand_Event$onKeyboardLost,
+								A2(_circuithub$elm_html_shorthand$Html_Shorthand_Event$messageDecoder, p.decoder, onEvent),
+								_elm_lang$core$Basics$identity);
+						},
+						p.update.onKeyboardLost),
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$placeholder, p.placeholder),
+						A2(_elm_lang$core$Maybe$map, _elm_lang$html$Html_Attributes$pattern, p.pattern)
+					])));
+		return A2(
+			_elm_lang$html$Html$input,
+			A2(_elm_lang$core$Basics_ops['++'], pattrs, attrs),
+			_elm_lang$core$Native_List.fromArray(
+				[]));
+	});
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputText$ = function (p) {
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{$class: p.$class, name: p.name, placeholder: p.placeholder, update: p.update, type$: 'text', pattern: _elm_lang$core$Maybe$Nothing, required: p.required, decoder: _elm_lang$html$Html_Events$targetValue},
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$value(p.value),
+				_elm_lang$html$Html_Attributes$autocomplete(p.autocomplete)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputMaybeText$ = function (p) {
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{$class: p.$class, name: p.name, placeholder: p.placeholder, update: p.update, type$: 'text', pattern: _elm_lang$core$Maybe$Nothing, required: false, decoder: _elm_community$html_extra$Html_Events_Extra$targetValueMaybe},
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$value(
+				A2(_elm_lang$core$Maybe$withDefault, '', p.value)),
+				_elm_lang$html$Html_Attributes$autocomplete(p.autocomplete)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputFloat$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{
+			$class: p.$class,
+			name: p.name,
+			placeholder: p.placeholder,
+			update: p.update,
+			type$: 'number',
+			pattern: _elm_lang$core$Maybe$Nothing,
+			required: true,
+			decoder: function () {
+				var _p5 = {ctor: '_Tuple2', _0: p.min, _1: p.max};
+				if (((_p5.ctor === '_Tuple2') && (_p5._0.ctor === 'Nothing')) && (_p5._1.ctor === 'Nothing')) {
+					return _elm_community$html_extra$Html_Events_Extra$targetValueFloat;
+				} else {
+					return A2(
+						_elm_lang$core$Json_Decode$customDecoder,
+						_elm_community$html_extra$Html_Events_Extra$targetValueFloat,
+						function (v) {
+							return ((_elm_lang$core$Native_Utils.cmp(
+								v,
+								A2(_elm_lang$core$Maybe$withDefault, -1 / 0, p.min)) < 0) || (_elm_lang$core$Native_Utils.cmp(
+								v,
+								A2(_elm_lang$core$Maybe$withDefault, 1 / 0, p.max)) > 0)) ? _elm_lang$core$Result$Err('out of bounds') : _elm_lang$core$Result$Ok(v);
+						});
+				}
+			}()
+		},
+		A2(
+			_elm_lang$core$List_ops['::'],
+			_elm_community$html_extra$Html_Attributes_Extra$valueAsFloat(p.value),
+			A2(
+				_elm_lang$core$List_ops['::'],
+				A2(
+					_elm_community$html_extra$Html_Attributes_Extra$stringProperty,
+					'step',
+					A2(
+						_elm_lang$core$Maybe$withDefault,
+						'any',
+						A2(_elm_lang$core$Maybe$map, _elm_lang$core$Basics$toString, p.step))),
+				filterJust(
+					_elm_lang$core$Native_List.fromArray(
+						[
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p6) {
+								return _elm_lang$html$Html_Attributes$min(
+									_elm_lang$core$Basics$toString(_p6));
+							},
+							p.min),
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p7) {
+								return _elm_lang$html$Html_Attributes$max(
+									_elm_lang$core$Basics$toString(_p7));
+							},
+							p.max)
+						])))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputMaybeFloat$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{
+			$class: p.$class,
+			name: p.name,
+			placeholder: p.placeholder,
+			update: p.update,
+			type$: 'number',
+			pattern: _elm_lang$core$Maybe$Nothing,
+			required: false,
+			decoder: function () {
+				var _p8 = {ctor: '_Tuple2', _0: p.min, _1: p.max};
+				if (((_p8.ctor === '_Tuple2') && (_p8._0.ctor === 'Nothing')) && (_p8._1.ctor === 'Nothing')) {
+					return _elm_community$html_extra$Html_Events_Extra$targetValueMaybeFloat;
+				} else {
+					return A2(
+						_elm_lang$core$Json_Decode$customDecoder,
+						_elm_community$html_extra$Html_Events_Extra$targetValueMaybeFloat,
+						function (mv) {
+							var _p9 = mv;
+							if (_p9.ctor === 'Nothing') {
+								return _elm_lang$core$Result$Ok(_elm_lang$core$Maybe$Nothing);
+							} else {
+								var _p10 = _p9._0;
+								return ((_elm_lang$core$Native_Utils.cmp(
+									_p10,
+									A2(_elm_lang$core$Maybe$withDefault, -1 / 0, p.min)) < 0) || (_elm_lang$core$Native_Utils.cmp(
+									_p10,
+									A2(_elm_lang$core$Maybe$withDefault, 1 / 0, p.max)) > 0)) ? _elm_lang$core$Result$Err('out of bounds') : _elm_lang$core$Result$Ok(mv);
+							}
+						});
+				}
+			}()
+		},
+		A2(
+			_elm_lang$core$List_ops['::'],
+			function () {
+				var _p11 = p.value;
+				if (_p11.ctor === 'Nothing') {
+					return _elm_lang$html$Html_Attributes$value('');
+				} else {
+					return _elm_community$html_extra$Html_Attributes_Extra$valueAsFloat(_p11._0);
+				}
+			}(),
+			A2(
+				_elm_lang$core$List_ops['::'],
+				A2(
+					_elm_community$html_extra$Html_Attributes_Extra$stringProperty,
+					'step',
+					A2(
+						_elm_lang$core$Maybe$withDefault,
+						'any',
+						A2(_elm_lang$core$Maybe$map, _elm_lang$core$Basics$toString, p.step))),
+				filterJust(
+					_elm_lang$core$Native_List.fromArray(
+						[
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p12) {
+								return _elm_lang$html$Html_Attributes$min(
+									_elm_lang$core$Basics$toString(_p12));
+							},
+							p.min),
+							A2(
+							_elm_lang$core$Maybe$map,
+							function (_p13) {
+								return _elm_lang$html$Html_Attributes$max(
+									_elm_lang$core$Basics$toString(_p13));
+							},
+							p.max)
+						])))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputInt$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{
+			$class: p.$class,
+			name: p.name,
+			placeholder: p.placeholder,
+			update: p.update,
+			type$: 'number',
+			pattern: _elm_lang$core$Maybe$Nothing,
+			required: true,
+			decoder: function () {
+				var _p14 = {ctor: '_Tuple2', _0: p.min, _1: p.max};
+				if (((_p14.ctor === '_Tuple2') && (_p14._0.ctor === 'Nothing')) && (_p14._1.ctor === 'Nothing')) {
+					return _elm_community$html_extra$Html_Events_Extra$targetValueInt;
+				} else {
+					return A2(
+						_elm_lang$core$Json_Decode$customDecoder,
+						_elm_community$html_extra$Html_Events_Extra$targetValueInt,
+						function (v) {
+							return ((_elm_lang$core$Native_Utils.cmp(
+								v,
+								A2(
+									_elm_lang$core$Maybe$withDefault,
+									_elm_lang$core$Basics$floor(-1 / 0),
+									p.min)) < 0) || (_elm_lang$core$Native_Utils.cmp(
+								v,
+								A2(
+									_elm_lang$core$Maybe$withDefault,
+									_elm_lang$core$Basics$ceiling(1 / 0),
+									p.max)) > 0)) ? _elm_lang$core$Result$Err('out of bounds') : _elm_lang$core$Result$Ok(v);
+						});
+				}
+			}()
+		},
+		A2(
+			_elm_lang$core$List_ops['::'],
+			_elm_community$html_extra$Html_Attributes_Extra$valueAsInt(p.value),
+			filterJust(
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (_p15) {
+							return _elm_lang$html$Html_Attributes$min(
+								_elm_lang$core$Basics$toString(_p15));
+						},
+						p.min),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (_p16) {
+							return _elm_lang$html$Html_Attributes$max(
+								_elm_lang$core$Basics$toString(_p16));
+						},
+						p.max),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (_p17) {
+							return A2(
+								_elm_community$html_extra$Html_Attributes_Extra$stringProperty,
+								'step',
+								_elm_lang$core$Basics$toString(_p17));
+						},
+						p.step)
+					]))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputMaybeInt$ = function (p) {
+	var filterJust = _elm_lang$core$List$filterMap(_elm_lang$core$Basics$identity);
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{
+			$class: p.$class,
+			name: p.name,
+			placeholder: p.placeholder,
+			update: p.update,
+			type$: 'number',
+			pattern: _elm_lang$core$Maybe$Nothing,
+			required: false,
+			decoder: function () {
+				var _p18 = {ctor: '_Tuple2', _0: p.min, _1: p.max};
+				if (((_p18.ctor === '_Tuple2') && (_p18._0.ctor === 'Nothing')) && (_p18._1.ctor === 'Nothing')) {
+					return _elm_community$html_extra$Html_Events_Extra$targetValueMaybeInt;
+				} else {
+					return A2(
+						_elm_lang$core$Json_Decode$customDecoder,
+						_elm_community$html_extra$Html_Events_Extra$targetValueMaybeInt,
+						function (mv) {
+							var _p19 = mv;
+							if (_p19.ctor === 'Nothing') {
+								return _elm_lang$core$Result$Ok(_elm_lang$core$Maybe$Nothing);
+							} else {
+								var _p20 = _p19._0;
+								return ((_elm_lang$core$Native_Utils.cmp(
+									_p20,
+									A2(
+										_elm_lang$core$Maybe$withDefault,
+										_elm_lang$core$Basics$floor(-1 / 0),
+										p.min)) < 0) || (_elm_lang$core$Native_Utils.cmp(
+									_p20,
+									A2(
+										_elm_lang$core$Maybe$withDefault,
+										_elm_lang$core$Basics$ceiling(1 / 0),
+										p.max)) > 0)) ? _elm_lang$core$Result$Err('out of bounds') : _elm_lang$core$Result$Ok(mv);
+							}
+						});
+				}
+			}()
+		},
+		A2(
+			_elm_lang$core$List_ops['::'],
+			function () {
+				var _p21 = p.value;
+				if (_p21.ctor === 'Nothing') {
+					return _elm_lang$html$Html_Attributes$value('');
+				} else {
+					return _elm_community$html_extra$Html_Attributes_Extra$valueAsInt(_p21._0);
+				}
+			}(),
+			filterJust(
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (_p22) {
+							return _elm_lang$html$Html_Attributes$min(
+								_elm_lang$core$Basics$toString(_p22));
+						},
+						p.min),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (_p23) {
+							return _elm_lang$html$Html_Attributes$max(
+								_elm_lang$core$Basics$toString(_p23));
+						},
+						p.max),
+						A2(
+						_elm_lang$core$Maybe$map,
+						function (_p24) {
+							return A2(
+								_elm_community$html_extra$Html_Attributes_Extra$stringProperty,
+								'step',
+								_elm_lang$core$Basics$toString(_p24));
+						},
+						p.step)
+					]))));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputUrl$ = function (p) {
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{$class: p.$class, name: p.name, placeholder: p.placeholder, update: p.update, type$: 'url', pattern: _elm_lang$core$Maybe$Nothing, required: p.required, decoder: _elm_lang$html$Html_Events$targetValue},
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$value(p.value),
+				_elm_lang$html$Html_Attributes$autocomplete(p.autocomplete)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$inputMaybeUrl$ = function (p) {
+	return A2(
+		_circuithub$elm_html_shorthand$Html_Shorthand$inputField$,
+		{$class: p.$class, name: p.name, placeholder: p.placeholder, update: p.update, type$: 'url', pattern: _elm_lang$core$Maybe$Nothing, required: false, decoder: _elm_community$html_extra$Html_Events_Extra$targetValueMaybe},
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_elm_lang$html$Html_Attributes$value(
+				A2(_elm_lang$core$Maybe$withDefault, '', p.value)),
+				_elm_lang$html$Html_Attributes$autocomplete(p.autocomplete)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$select$ = function (p) {
+	var i$ = _circuithub$elm_html_shorthand$Html_Shorthand$encodeId(p.name);
+	return _elm_lang$html$Html$select(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$id(i$),
+				_elm_lang$html$Html_Attributes$name(i$),
+				A2(_circuithub$elm_html_shorthand$Html_Shorthand_Event$onChange, _elm_lang$html$Html_Events$targetValue, p.update.onSelect)
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$output$ = function (p) {
+	var i$ = _circuithub$elm_html_shorthand$Html_Shorthand$encodeId(p.name);
+	return _elm_lang$html$Html$output(
+		_elm_lang$core$Native_List.fromArray(
+			[
+				_circuithub$elm_html_shorthand$Html_Shorthand$class$(p.$class),
+				_elm_lang$html$Html_Attributes$id(i$),
+				_elm_lang$html$Html_Attributes$name(i$),
+				_elm_lang$html$Html_Attributes$for(
+				A2(
+					_elm_lang$core$String$join,
+					' ',
+					A2(_elm_lang$core$List$map, _circuithub$elm_html_shorthand$Html_Shorthand$encodeId, p.$for)))
+			]));
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdateFallbackFocusLost = function (handler) {
+	var doErr = function (r) {
+		var _p25 = r;
+		if (_p25.ctor === 'Ok') {
+			return _elm_lang$core$Maybe$Nothing;
+		} else {
+			var _p26 = A2(_elm_lang$core$Json_Decode$decodeValue, _elm_lang$html$Html_Events$targetValue, _p25._0.event);
+			if (_p26.ctor === 'Ok') {
+				return _elm_lang$core$Maybe$Just(
+					handler.onFallback(_p26._0));
+			} else {
+				return _elm_lang$core$Maybe$Nothing;
+			}
+		}
+	};
+	var doOk = function (r) {
+		var _p27 = r;
+		if (_p27.ctor === 'Ok') {
+			return _elm_lang$core$Maybe$Just(
+				handler.onInput(_p27._0));
+		} else {
+			return _elm_lang$core$Maybe$Nothing;
+		}
+	};
+	return {
+		onInput: _elm_lang$core$Maybe$Just(doOk),
+		onEnter: _elm_lang$core$Maybe$Just(doErr),
+		onKeyboardLost: _elm_lang$core$Maybe$Just(doErr)
+	};
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdate = {onInput: _elm_lang$core$Maybe$Nothing, onEnter: _elm_lang$core$Maybe$Nothing, onKeyboardLost: _elm_lang$core$Maybe$Nothing};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdateContinuous = function (handler) {
+	var doOk = function (r) {
+		var _p28 = r;
+		if (_p28.ctor === 'Ok') {
+			return _elm_lang$core$Maybe$Just(
+				handler.onInput(_p28._0));
+		} else {
+			return _elm_lang$core$Maybe$Nothing;
+		}
+	};
+	return _elm_lang$core$Native_Utils.update(
+		_circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdate,
+		{
+			onInput: _elm_lang$core$Maybe$Just(doOk)
+		});
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdateFocusLost = function (handler) {
+	var doOk = function (r) {
+		var _p29 = r;
+		if (_p29.ctor === 'Ok') {
+			return _elm_lang$core$Maybe$Just(
+				handler.onInput(_p29._0));
+		} else {
+			return _elm_lang$core$Maybe$Nothing;
+		}
+	};
+	return _elm_lang$core$Native_Utils.update(
+		_circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdate,
+		{
+			onEnter: _elm_lang$core$Maybe$Just(doOk),
+			onKeyboardLost: _elm_lang$core$Maybe$Just(doOk)
+		});
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdateFallbackContinuous = function (handler) {
+	var doOkErr = function (r) {
+		var _p30 = r;
+		if (_p30.ctor === 'Ok') {
+			return _elm_lang$core$Maybe$Just(
+				handler.onInput(_p30._0));
+		} else {
+			var _p31 = A2(_elm_lang$core$Json_Decode$decodeValue, _elm_lang$html$Html_Events$targetValue, _p30._0.event);
+			if (_p31.ctor === 'Ok') {
+				return _elm_lang$core$Maybe$Just(
+					handler.onFallback(_p31._0));
+			} else {
+				return _elm_lang$core$Maybe$Nothing;
+			}
+		}
+	};
+	return _elm_lang$core$Native_Utils.update(
+		_circuithub$elm_html_shorthand$Html_Shorthand$fieldUpdate,
+		{
+			onInput: _elm_lang$core$Maybe$Just(doOkErr)
+		});
+};
+var _circuithub$elm_html_shorthand$Html_Shorthand$AutoDirection = {ctor: 'AutoDirection'};
+var _circuithub$elm_html_shorthand$Html_Shorthand$RightToLeft = {ctor: 'RightToLeft'};
+var _circuithub$elm_html_shorthand$Html_Shorthand$LeftToRight = {ctor: 'LeftToRight'};

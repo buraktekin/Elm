@@ -1,0 +1,98 @@
+var _elm_community$html_extra$Html_Events_Extra$targetValueIntParse = A2(_elm_lang$core$Json_Decode$customDecoder, _elm_lang$html$Html_Events$targetValue, _elm_lang$core$String$toInt);
+var _elm_community$html_extra$Html_Events_Extra$targetValueFloatParse = A2(_elm_lang$core$Json_Decode$customDecoder, _elm_lang$html$Html_Events$targetValue, _elm_lang$core$String$toFloat);
+var _elm_community$html_extra$Html_Events_Extra$targetValueMaybe = A2(
+	_elm_lang$core$Json_Decode$customDecoder,
+	_elm_lang$html$Html_Events$targetValue,
+	function (s) {
+		return _elm_lang$core$Result$Ok(
+			_elm_lang$core$Native_Utils.eq(s, '') ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(s));
+	});
+var _elm_community$html_extra$Html_Events_Extra$targetValueMaybeInt = function () {
+	var traverse = F2(
+		function (f, mx) {
+			var _p0 = mx;
+			if (_p0.ctor === 'Nothing') {
+				return _elm_lang$core$Result$Ok(_elm_lang$core$Maybe$Nothing);
+			} else {
+				return A2(
+					_elm_lang$core$Result$map,
+					_elm_lang$core$Maybe$Just,
+					f(_p0._0));
+			}
+		});
+	return A2(
+		_elm_lang$core$Json_Decode$customDecoder,
+		_elm_community$html_extra$Html_Events_Extra$targetValueMaybe,
+		traverse(_elm_lang$core$String$toInt));
+}();
+var _elm_community$html_extra$Html_Events_Extra$targetValueMaybeFloatParse = function () {
+	var traverse = F2(
+		function (f, mx) {
+			var _p1 = mx;
+			if (_p1.ctor === 'Nothing') {
+				return _elm_lang$core$Result$Ok(_elm_lang$core$Maybe$Nothing);
+			} else {
+				return A2(
+					_elm_lang$core$Result$map,
+					_elm_lang$core$Maybe$Just,
+					f(_p1._0));
+			}
+		});
+	return A2(
+		_elm_lang$core$Json_Decode$customDecoder,
+		_elm_community$html_extra$Html_Events_Extra$targetValueMaybe,
+		traverse(_elm_lang$core$String$toFloat));
+}();
+var _elm_community$html_extra$Html_Events_Extra$targetValueMaybeIntParse = function () {
+	var traverse = F2(
+		function (f, mx) {
+			var _p2 = mx;
+			if (_p2.ctor === 'Nothing') {
+				return _elm_lang$core$Result$Ok(_elm_lang$core$Maybe$Nothing);
+			} else {
+				return A2(
+					_elm_lang$core$Result$map,
+					_elm_lang$core$Maybe$Just,
+					f(_p2._0));
+			}
+		});
+	return A2(
+		_elm_lang$core$Json_Decode$customDecoder,
+		_elm_community$html_extra$Html_Events_Extra$targetValueMaybe,
+		traverse(_elm_lang$core$String$toInt));
+}();
+var _elm_community$html_extra$Html_Events_Extra$targetValueInt = A2(
+	_elm_lang$core$Json_Decode$at,
+	_elm_lang$core$Native_List.fromArray(
+		['target', 'valueAsNumber']),
+	_elm_lang$core$Json_Decode$int);
+var _elm_community$html_extra$Html_Events_Extra$targetValueFloat = A2(
+	_elm_lang$core$Json_Decode$customDecoder,
+	A2(
+		_elm_lang$core$Json_Decode$at,
+		_elm_lang$core$Native_List.fromArray(
+			['target', 'valueAsNumber']),
+		_elm_lang$core$Json_Decode$float),
+	function (v) {
+		return _elm_lang$core$Basics$isNaN(v) ? _elm_lang$core$Result$Err('Not a number') : _elm_lang$core$Result$Ok(v);
+	});
+var _elm_community$html_extra$Html_Events_Extra$targetValueMaybeFloat = A2(
+	_elm_lang$core$Json_Decode$andThen,
+	_elm_community$html_extra$Html_Events_Extra$targetValueMaybe,
+	function (mval) {
+		var _p3 = mval;
+		if (_p3.ctor === 'Nothing') {
+			return _elm_lang$core$Json_Decode$succeed(_elm_lang$core$Maybe$Nothing);
+		} else {
+			return A2(_elm_lang$core$Json_Decode$map, _elm_lang$core$Maybe$Just, _elm_community$html_extra$Html_Events_Extra$targetValueFloat);
+		}
+	});
+var _elm_community$html_extra$Html_Events_Extra$charCode = A2(
+	_elm_lang$core$Json_Decode$map,
+	function (_p4) {
+		return A2(
+			_elm_lang$core$Maybe$map,
+			_elm_lang$core$Basics$fst,
+			_elm_lang$core$String$uncons(_p4));
+	},
+	A2(_elm_lang$core$Json_Decode_ops[':='], 'charCode', _elm_lang$core$Json_Decode$string));
