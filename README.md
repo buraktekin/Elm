@@ -3,7 +3,10 @@ Introduction to Elm-lang and GUI creation with functional programming.
 
 ## Crucial Differences
 
-### [1. Comparing Records and Objects*][1]
+### [1. ToDo MVC Benchmark*][2]
+![](http://elm-lang.org/diagrams/sampleResults.png)
+
+### [2. Comparing Records and Objects*][1]
 
 Records in Elm are similar to objects in JavaScript, but there are some crucial differences. The major differences are that with records:
 
@@ -20,7 +23,6 @@ Records also support structural typing which means records in Elm can be used in
 
 
 
-
-
 [//]:(References)
 [1]: http://guide.elm-lang.org/core_language.html#comparing-records-and-objects
+[2]: http://elm-lang.org/blog/blazing-fast-html
