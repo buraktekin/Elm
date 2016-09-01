@@ -17,6 +17,15 @@ Elm encourages a strict separation of data and logic, and the ability to say thi
 
 Records also support structural typing which means records in Elm can be used in any situation as long as the necessary fields exist. This gives us flexibility without compromising reliability.
 
+```elm
+-- Records in Elm-lang: --
+{ x = 3, y = 4 }
+
+-- Just like tuples, a record can hold values with different types, so we can represent a book like this: --
+
+{title = "Steppenwolf", author = "Hesse", pages = 237 }
+```
+
 
 
 
