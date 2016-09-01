@@ -1,0 +1,12 @@
+body{
+  max-width: 400px;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.wrapper input[type="text"],
+.wrapper input[type="password"] {
+  width: 100%;
+  display: block!important;
+  margin: 3px 0;
+}
