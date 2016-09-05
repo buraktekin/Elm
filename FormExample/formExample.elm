@@ -21,15 +21,12 @@ type alias Model =
   , passwordConfirm : String
   }
 
-
 model : Model
 model =
   Model "" "" ""
 
 
-
 -- UPDATE
-
 
 type Msg
     = Name String
@@ -48,7 +45,6 @@ update msg model =
 
     PasswordConfirm password ->
       { model | passwordConfirm = password }
-
 
 
 -- VIEW
